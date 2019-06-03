@@ -1,7 +1,7 @@
-package com.ifpb.pw.usuarioservice.controller;
+package br.edu.ifpb.usuarioservice.controller;
 
-import com.ifpb.pw.usuarioservice.domain.Usuario;
-import com.ifpb.pw.usuarioservice.service.UsuarioService;
+import br.edu.ifpb.usuarioservice.domain.Usuario;
+import br.edu.ifpb.usuarioservice.service.UsuarioService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

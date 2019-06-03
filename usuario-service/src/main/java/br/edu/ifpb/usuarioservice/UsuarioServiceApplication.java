@@ -1,4 +1,4 @@
-package com.ifpb.pw.usuarioservice;
+package br.edu.ifpb.usuarioservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

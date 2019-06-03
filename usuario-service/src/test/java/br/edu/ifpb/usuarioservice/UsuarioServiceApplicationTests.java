@@ -1,8 +1,7 @@
-package com.ifpb.pw.usuarioservice;
+package br.edu.ifpb.usuarioservice;
 
-import com.ifpb.pw.usuarioservice.domain.Usuario;
-import com.ifpb.pw.usuarioservice.service.UsuarioService;
-import org.junit.Assert;
+import br.edu.ifpb.usuarioservice.service.UsuarioService;
+import br.edu.ifpb.usuarioservice.domain.Usuario;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

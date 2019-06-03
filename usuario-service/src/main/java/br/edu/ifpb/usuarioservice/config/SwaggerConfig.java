@@ -1,4 +1,4 @@
-package com.ifpb.pw.usuarioservice.config;
+package br.edu.ifpb.usuarioservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

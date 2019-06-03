@@ -1,7 +1,7 @@
-package com.ifpb.pw.usuarioservice.domain;
+package br.edu.ifpb.usuarioservice.domain;
 
-import com.ifpb.pw.usuarioservice.domain.enumerated.TipoUsuario;
-import com.ifpb.pw.usuarioservice.domain.enumerated.UsuarioStatus;
+import br.edu.ifpb.usuarioservice.domain.enumerated.TipoUsuario;
+import br.edu.ifpb.usuarioservice.domain.enumerated.UsuarioStatus;
 import lombok.*;
 import org.springframework.data.domain.AbstractAggregateRoot;
 

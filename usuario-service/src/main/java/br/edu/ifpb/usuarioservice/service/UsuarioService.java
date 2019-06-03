@@ -1,13 +1,11 @@
-package com.ifpb.pw.usuarioservice.service;
+package br.edu.ifpb.usuarioservice.service;
 
-import com.ifpb.pw.usuarioservice.domain.Usuario;
-import com.ifpb.pw.usuarioservice.repositories.UsuarioRepository;
+import br.edu.ifpb.usuarioservice.repositories.UsuarioRepository;
+import br.edu.ifpb.usuarioservice.domain.Usuario;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @Service
 @Slf4j
