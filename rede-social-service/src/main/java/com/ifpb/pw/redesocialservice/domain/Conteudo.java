@@ -33,7 +33,6 @@ public class Conteudo extends AbstractAggregateRoot<Conteudo> {
     private ConteudoTipo tipo;
     private String usuario;
 
-//    @OneToMany(mappedBy = "conteudo")
-//    private List<Midias> midias;
-    private String midias;
+    @OneToMany(mappedBy = "conteudo")
+    private List<String> midias;
 }

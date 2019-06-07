@@ -24,8 +24,7 @@ public class Postagem extends AbstractAggregateRoot<Postagem> {
     private String corpo;
     private ZonedDateTime postagem_data;
     private ZonedDateTime publicacao_data;
-//    private List<String> conteudos;
-    private String conteudos;
+    private List<String> conteudos;
     private String usuario;
 
 }

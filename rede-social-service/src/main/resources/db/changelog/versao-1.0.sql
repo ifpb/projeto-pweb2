@@ -1,30 +1,13 @@
 create sequence if not exists hibernate_sequence;
 
-create table if not exists postagem
+create table if not exists video
 (
 	id bigint not null
-		constraint postagem_pkey
+		constraint video_pkey
 			primary key,
-	postagem_data timestamp,
-	publicacao_data timestamp,
-	titulo varchar(255),
+	cadastro_data timestamp,
 	nome varchar(255),
-	corpo varchar(255),
-	conteudos varchar(255),
-	usuario varchar(255)
-);
-
-create table if not exists conteudo
-(
-	id bigint not null
-		constraint conteudo_pkey
-			primary key,
-	cadastro timestamp,
-	publicacao timestamp,
-	descricao varchar(255),
-	titulo varchar(255),
-	status varchar(255),
-	tipo varchar(255),
-	midias varchar(255),
+	tamanho varchar(255),
+	duracao varchar(255),
 	usuario varchar(255)
 );
