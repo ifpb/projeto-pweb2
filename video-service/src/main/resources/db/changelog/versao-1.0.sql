@@ -7,7 +7,7 @@ create table if not exists video
 			primary key,
 	cadastro_data timestamp,
 	nome varchar(255),
-	tamanho varchar(255),
-	duracao varchar(255),
+	tamanho bigint,
+	duracao bigint,
 	usuario varchar(255)
 );

@@ -18,8 +18,8 @@ public class Video extends AbstractAggregateRoot<Video> {
     @GeneratedValue
     private Long id;
     private String nome;
-    private String tamanho;
-    private String duracao;
+    private Long tamanho;
+    private Long duracao;
     private ZonedDateTime cadastro_data;
     private String usuario;
 
