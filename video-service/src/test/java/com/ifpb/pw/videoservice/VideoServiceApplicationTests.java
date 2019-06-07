@@ -23,7 +23,7 @@ public class VideoServiceApplicationTests {
 	public void createVideo(){
 		Video video = new Video();
 		video.setNome("3 Teste");
-		video.setTamanho("500kb");
+		video.setTamanho(500l);
 		service.createOrUpdate(video);
 	}
 
