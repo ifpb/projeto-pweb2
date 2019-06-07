@@ -1,4 +1,4 @@
-create sequence if not exists hibernate_sequence;
+create sequence hibernate_sequence;
 
 create table if not exists usuario
 (

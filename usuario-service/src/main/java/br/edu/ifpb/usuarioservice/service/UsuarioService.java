@@ -3,7 +3,6 @@ package br.edu.ifpb.usuarioservice.service;
 import br.edu.ifpb.usuarioservice.repositories.UsuarioRepository;
 import br.edu.ifpb.usuarioservice.domain.Usuario;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,11 +12,9 @@ import java.util.List;
 public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
-    private final BCryptPasswordEncoder encoder;
 
     public UsuarioService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
-        this.encoder = new BCryptPasswordEncoder();
     }
 
     public List<Usuario> findAll(){
@@ -29,7 +26,6 @@ public class UsuarioService {
     }
 
     public Usuario createOrUpdate(Usuario usuario){
-        usuario.setSenha(encoder.encode(usuario.getSenha()));
         return usuarioRepository.save(usuario);
     }
 

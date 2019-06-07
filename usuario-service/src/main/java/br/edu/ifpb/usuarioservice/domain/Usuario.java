@@ -24,7 +24,7 @@ public class Usuario extends AbstractAggregateRoot<Usuario> {
     private String senha;
     @Enumerated(value = EnumType.STRING)
     private UsuarioStatus status;
-    private ZonedDateTime cadastroData;
+    private ZonedDateTime cadastro_data;
     @Enumerated(value = EnumType.STRING)
-    private TipoUsuario tipoUsuario;
+    private TipoUsuario tipo_usuario;
 }
