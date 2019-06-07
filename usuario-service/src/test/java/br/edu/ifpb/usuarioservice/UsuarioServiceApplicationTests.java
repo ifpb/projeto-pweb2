@@ -1,5 +1,6 @@
 package br.edu.ifpb.usuarioservice;
 
+import br.edu.ifpb.usuarioservice.domain.enumerated.TipoUsuario;
 import br.edu.ifpb.usuarioservice.service.UsuarioService;
 import br.edu.ifpb.usuarioservice.domain.Usuario;
 import org.junit.Test;
@@ -25,6 +26,7 @@ public class UsuarioServiceApplicationTests {
 		usuario.setNome("3 Teste");
 		usuario.setEmail("email@teste.com");
 		usuario.setSenha("12545");
+		usuario.setTipoUsuario(TipoUsuario.BANDA);
 		service.createOrUpdate(usuario);
 	}
 
