@@ -5,3 +5,14 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:ifpb/projeto-pweb2-config.git
+#          ignore-local-ssh-settings: false
+#          private-key:
+#          host-key-algorithm: ssh-rsa
+#          host-key: local
