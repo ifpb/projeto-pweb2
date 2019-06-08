@@ -11,8 +11,5 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:ifpb/projeto-pweb2-config.git
-#          ignore-local-ssh-settings: false
-#          private-key:
-#          host-key-algorithm: ssh-rsa
-#          host-key: local
+          uri: https://github.com/ifpb/projeto-pweb2-config.git
+          skip-ssl-validation: true
