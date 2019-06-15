@@ -13,3 +13,4 @@ spring:
         git:
           uri: https://github.com/ifpb/projeto-pweb2-config.git
           skip-ssl-validation: true
+        prefix: /config
