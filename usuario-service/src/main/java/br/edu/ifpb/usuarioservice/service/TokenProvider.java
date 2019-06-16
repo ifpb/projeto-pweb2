@@ -33,7 +33,7 @@ public class TokenProvider {
 
         return Jwts.builder()
                 .setSubject(usuario.getEmail())
-                .claim(TIPO_KEY, usuario.getTipo_usuario())
+                .claim(TIPO_KEY, usuario.getTipoUsuario())
                 .signWith(SignatureAlgorithm.HS512, jwtConfig.getJwt().getSecret())
                 .setExpiration(Date.from(expiration.toInstant()))
                 .compact();
