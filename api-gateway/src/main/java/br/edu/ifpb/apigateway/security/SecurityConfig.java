@@ -1,5 +1,6 @@
 package br.edu.ifpb.apigateway.security;
 
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -10,8 +11,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http.csrf().disable().authorizeRequests()
                 //.antMatchers("/**").hasRole("BANDA")
+                .antMatchers(HttpMethod.POST, "/usuario-service/login").permitAll()
+                // TODO Adicionar roles se necessário
+                .antMatchers("/usuario-service/**").permitAll()
                 .antMatchers("/css/**", "/index").permitAll()
                 .antMatchers("/video-service/**").hasAnyRole("ADMIN")
                 .antMatchers("/rede-social-service/").hasAnyRole("ADMIN")
