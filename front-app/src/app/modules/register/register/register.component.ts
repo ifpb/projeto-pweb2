@@ -24,6 +24,10 @@ export class RegisterComponent implements OnInit {
     this.initForm();
   }
 
+  private onSubmit() {
+    console.log(this.registerForm.value);
+  }
+
   private initForm() {
     this.registerForm = this.fb.group({
       nome: [null, Validators.required],
@@ -37,14 +41,7 @@ export class RegisterComponent implements OnInit {
       ])],
       confirmarSenha: [null, Validators.compose([
         Validators.required,
-      ])],
-      status: [null],
-      cadastroData: [null, Validators.compose([
-        Validators.required,
-      ])],
-      tipoUsuario: [null, Validators.compose([
-        Validators.required,
-      ])],
+      ])]
     }, {
       validator: ConfirmarSenhaValidator.MatchPassword
     });
