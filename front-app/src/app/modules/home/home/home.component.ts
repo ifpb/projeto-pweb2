@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuariosService } from '../_service';
-import { Usuario } from '../_models';
+import { UsuariosService } from '../../../core/services';
+import { Usuario } from '../../../core/models';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   private carregarTodosUsuarios() {
-      this.usuariosService.getAll().subscribe(usuarios => {
+      this.usuariosService.findAll().subscribe(usuarios => {
         this.usuarios = usuarios;
       }, error => {
         console.log("Ocorreu um erro ao tentar listar usuários, " + error);

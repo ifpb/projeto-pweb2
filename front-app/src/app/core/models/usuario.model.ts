@@ -1,9 +1,9 @@
-export class Usuario {
+export interface Usuario {
     id: number;
     nome: string;
     email: string;
     senha: string;
     status: string;
-    cadastro_data: Date;
-    tipo_usuario: string;
+    cadastroData: Date;
+    tipoUsuario: string;
 }

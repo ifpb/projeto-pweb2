@@ -4,7 +4,10 @@ import { UsuarioComponent } from './form/usuario/usuario.component';
 
 
 const routes: Routes = [
-  { path: '', component: UsuarioComponent }
+  // { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'register', loadChildren: './modules/register/register.module#RegisterModule' },
+  { path: 'home', loadChildren: './modules/home/home.module#HomeModule' },
+  { path: '', loadChildren: './modules/home/home.module#HomeModule' },
 ];
 
 @NgModule({
