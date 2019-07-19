@@ -5,18 +5,11 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@ConfigurationProperties(prefix = "application")
+@ConfigurationProperties(prefix = "application.jwt")
 @Configuration
 @Setter
 @Getter
-public class JWTConfig {
-
-    private JWT jwt;
-
-    @Setter
-    @Getter
-    public static class JWT {
-        private String secret;
-        private Integer expirationTimeInSeconds;
-    }
+public class JwtConfig {
+    private String secret;
+    private Integer expirationTimeInSeconds;
 }

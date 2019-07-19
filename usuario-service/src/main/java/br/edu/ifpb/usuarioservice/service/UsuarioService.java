@@ -30,7 +30,11 @@ public class UsuarioService {
     }
 
     public Usuario createOrUpdate(Usuario usuario){
-        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+        Usuario novoUsuario = usuarioRepository.findByEmail(usuario.getEmail()).orElse(new Usuario());
+        novoUsuario.setNome(usuario.getNome());
+        novoUsuario.setTipoUsuario(usuario.getTipoUsuario());
+        novoUsuario.setEmail(usuario.getEmail());
+        novoUsuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
         return usuarioRepository.save(usuario);
     }
 

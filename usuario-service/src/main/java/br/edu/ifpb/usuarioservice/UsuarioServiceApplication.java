@@ -15,10 +15,4 @@ public class UsuarioServiceApplication {
 		SpringApplication.run(UsuarioServiceApplication.class, args);
 	}
 
-
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
-
 }
