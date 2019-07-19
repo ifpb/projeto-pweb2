@@ -57,24 +57,31 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": true,
+              "aot": false,
+              "extractLicenses": false,
+              "vendorChunk": true,
+              "buildOptimizer": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
-          },
-          "development": {
-            "fileReplacements": [
-              {
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.dev.ts"
-              }
-            ],
-            "optimization": false,
-            "outputHashing": "all",
-            "sourceMap": true,
-            "extractCss": true,
-            "namedChunks": true,
-            "aot": false,
-            "extractLicenses": false,
-            "vendorChunk": true,
-            "buildOptimizer": false
           }
         },
         "serve": {
@@ -86,8 +93,8 @@
             "production": {
               "browserTarget": "front-app:build:production"
             },
-            "development": {
-              "browserTarget": "front-app:build:development"
+            "dev": {
+              "browserTarget": "front-app:build:dev"
             }
           }
         },
