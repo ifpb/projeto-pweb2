@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "c3484ed2-c777-4dba-967f-00ea0917fe04",
+		"name": "Rede Social Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conteudo - CRUD",
+			"item": [
+				{
+					"name": "Create Conteudo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 1,\n\t\"titulo\": \"Exemplo de conteudo\",\n\t\"descricao\" : \"descrição do conteudo\",\n\t\"status\" : \"PUBLICADO\",\n\t\"tipo\" : \"VIDEO\",\n\t\"usuario\" : \"diegopessoa12@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/conteudos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"conteudos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conteudos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/conteudos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"conteudos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conteudos by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/conteudos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"conteudos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conteudos Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/conteudos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"conteudos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Postagem - CRUD",
+			"item": [
+				{
+					"name": "Get Postagem",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Postagem by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"postagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Postagem",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : 1,\n\t\"titulo\": \"Exemplo de postagem\",\n\t\"corpo\" : \"descrição de postagem\",\n\t\"conteudos\" : [{\n\t\t\"id\" : 2,\n\t\t\"titulo\": \"Exemplo de conteudo\",\n\t\t\"descricao\" : \"descrição do conteudo\",\n\t\t\"status\" : \"PUBLICADO\",\n\t\t\"tipo\" : \"VIDEO\",\n\t\t\"usuario\" : \"diegopessoa12@gmail.com\"\n\t}],\n\t\"usuario\" : \"diegopessoa12@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/postagens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"postagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Postagem Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"titulo\": \"Exemplo de postagem atualizada\",\n\t\"corpo\" : \"descrição de postagem atualizada\",\n\t\"conteudos\" : [{\n\t\t\"id\" : 2,\n\t\t\"titulo\": \"Exemplo de conteudo\",\n\t\t\"descricao\" : \"descrição do conteudo\",\n\t\t\"status\" : \"PUBLICADO\",\n\t\t\"tipo\" : \"VIDEO\",\n\t\t\"usuario\" : \"diegopessoa12@gmail.com\"\n\t}],\n\t\"usuario\" : \"diegopessoa12@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8082/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"postagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Postagem",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8082/postagens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"postagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
